@@ -1,6 +1,25 @@
 ---
 const today = new Date();
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
 ---
 
-<footer>
+
+
+<footer class="flex flex-col gap-8 mb-10 mx-auto">
+    <section class="flex flex-wrap gap-2 text-[180px] w4/5">
+        <h2 class="font-titre"> la </h2> <h2 class="font-creative text-rouge"> Créativité </h2> <h2 class="font-titre">A votre portee</h2>
+    </section>
+    <section class="flex flex-col justify-center mb-24 mt-8">
+        <div class="bg-black h-1 relative z-0"></div>
+        <a class="absolute z-100" href="accueil.html">
+            <div class="bg-rouge text-black rounded-full w-fit h-fit py-20 px-6 hover:bg-black hover:text-beige cursor-pointer ">
+                <p class="font-titre text-3xl"> Me contacter </p>
+            </div>
+        </a>
+    </section>
+    <section class="flex gap-4">
+        <div class="border-2 bg-beige hover:bg-black text-black hover:text-beige cursor-pointer border-black rounded-lg w-fit px-6 py-4 text-2xl font-bold"> <p> axel.a.rameau@gmail.com </p> </div>
+        <div class="border-2 bg-beige hover:bg-black text-black hover:text-beige cursor-pointer border-black rounded-lg w-fit px-6 py-4 text-2xl font-bold"> <p> +33 6 45 50 47 63 </p> </div>
+    </section>
 </footer>

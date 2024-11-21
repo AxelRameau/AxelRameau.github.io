@@ -4,62 +4,28 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<nav class="flex justify-between items-center mx-auto mt-4 px-12 w-11/12 h-20 font-titre border-2 border-black rounded-lg">
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links ">
-			<HeaderLink class={'font-titre text-2xl text-beige-moi hover:text-rouge-moi cursor-pointer'} href="/">Accueil</HeaderLink>
-			<HeaderLink  href="/blog">Projets</HeaderLink>
+	<nav class="flex justify-between items-center px-12 h-20 font-titre bg-noir">
+		<h2 class="text-beige text-xl"><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links font-titre text-2xl text-beige hover:text-rouge cursor-pointer flex gap-5">
+			<HeaderLink href="/">Accueil</HeaderLink>
+			<HeaderLink href="/blog">Projets</HeaderLink>
 			<HeaderLink href="/about">A propos</HeaderLink>
 			<HeaderLink href="/contact">Contact</HeaderLink>
 		</div>
 						
-		<div class="social-links">
+		<div class="social-links flex items-center gap-2">
 			<a href="https://www.instagram.com/axel_aristote_rameau/" target="_blank">
 				<span class="sr-only">Suis moi sur Instagram</span>
-				<img src="logo-insta.png" alt="Découvre mes photos">
+				<img class="w-12 h-square"  src="instagram.png" alt="Découvre mes photos">
 			</a>
 			<a href=https://www.behance.net/43a086d5" target="_blank">
 				<span class="sr-only">Tu peux aussi aller sur mon Behance pour voir mes autres projets</span>
-				<img src="logo-be.png" alt="Découvre mes derniers projets">
+				<img class="w-16 h-square" src="behance.png" alt="Découvre mes derniers projets">
 			</a>
 		</div>
 	</nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
