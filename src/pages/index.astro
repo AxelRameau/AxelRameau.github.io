@@ -1,0 +1,81 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article class="flex w-11/12 mx-auto gap-20 mt-20">
+				<section class="w-1/2">
+					<div>
+						<h1 class="font-titre text-[120px] text-rouge-moi"> Graphisme & photo </h1>
+						<h2 class="text-4xl"> UI/UX Designer & photographer </h2>
+					</div>
+					<section class="flex gap-20">
+						<div class="flex flex-col gap-5">
+							<h3 class="titre font-bold text-end">+100</h3>
+							<p class="text-justify">Plus de 100 projets de photographie & vidéo à mon actif. La photographie représente une vraie passion pour moi.</p>
+						</div>
+						<div class="flex flex-col gap-5">
+							<h3 class="titre font-bold text-end">+10</h3>
+							<p class="text-justify">J’ai réalisé une dizaine de projets de webdesign sur différents thèmes et avec différents style graphique.</p>
+						</div>
+					</section>
+				</section>
+				<section class="w-1/2 aspect-video">
+					<img src="img-portfolio/bunbun_mockup.jpg" alt="">
+					<a href="">Me contacter</a>
+				</section>
+			</article>
+				
+			<article class="flex flex-col w-full mx-auto mb-20 gap-5">
+				<ul class="flex flex-wrap">
+					<li class="w-1/4"><img  src="img-portfolio/bmw-axel-concours.jpg" alt="photo d'une vielle BMW"></li>
+					<li class="w-1/4"><img src="img-portfolio/lily_miroir.jpg" alt="Photo d'une fille devant son miroir prise de l'arrière en 3/4"></li>
+					<li class="w-1/4"><img src="img-portfolio/fredo_chien.jpg" alt="photo d'un homme avec un chien blanc"></li>
+					<li class="w-1/4"> <img src="img-portfolio/moto-1.jpg" alt="photo du compteur d'une moto vintage chromée"></li>
+					<li class="w-1/4"><img src="img-portfolio/motobécane-2.jpg" alt="photo de l'avant d'une motobécane"></li>
+					<li class="w-1/4"><img src="img-portfolio/post-foraine-2-2.jpg" alt="photo d'un homme jouant à un jeu, avec les pinces, à la fête foraine "></li>
+					<li class="w-1/4"><img src="img-portfolio/cherie.jpg" alt="photo d'une fille contre un arbre"></li>
+					<li class="w-1/4"> <img src="img-portfolio/chag-blanc-post.jpg" alt="photo d'un chat"></li>
+				</ul>
+				<div class="bouton mx-auto"> 
+					<a href="projets.html"> Voir + de photo </a> 
+				</div>
+			</article>
+			<article>
+				<ul class="flex flex-wrap gap-20 w-4/5 mx-auto my-20">
+					<a href="bunbun.html" class="flex flex-col gap-5 w-[300px]">
+						<img class="vignette_projet" src="img-portfolio/bunbun_mockup.jpg" alt="photo d'un mac où il y'a le site de Bunbun">
+						<h2 class="font-titre text-black text-2xl text-center"> Bunbun - Cofee shop</h2>
+					</a>
+					<li class="flex flex-col gap-5 w-[300px]">
+						<img class="vignette_projet" src="img-portfolio/logo_mosbier.png" alt="logo du bar Mos&Bier">
+						<h2 class="font-titre text-black text-2xl text-center"> Mos & Bier - bar</h2>
+					</li>
+					<li class="flex flex-col gap-5 w-[300px]">
+						<img class="vignette_projet" src="img-portfolio/cover_iconographie.jpg" alt="photo où il y'a a un tableau avec des icones que j'ai réalisé sur illustrator">
+						<h2 class="font-titre text-black text-2xl text-center"> Iconographie</h2>
+					</li>
+					<li class="flex flex-col gap-5 w-[300px]">
+						<img class="vignette_projet" src="img-portfolio/ui_challenge_mockup.jpg" alt="projet 1">
+						<h2 class="font-titre text-black text-2xl text-center"> UI challenge - Realisation d'interface d'entrainement</h2>
+					</li>
+					<li class="flex flex-col gap-5 w-[300px]">
+						<img class="vignette_projet" src="img-portfolio/mockup-doom.jpg" alt="photo d'un ordinateur avec la landing page de doom que j'ai réalisé">
+						<h2 class="font-titre text-black text-2xl text-center"> Doom - Landing page</h2>
+					</li>
+		   		</ul>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
