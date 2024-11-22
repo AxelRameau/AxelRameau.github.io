@@ -6,11 +6,11 @@ import { SITE_TITLE } from '../consts';
 <header>
 	<nav class="flex justify-between items-center px-12 h-20 font-titre bg-noir">
 		<h2 class="text-beige text-xl"><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links font-titre text-2xl text-beige hover:text-rouge cursor-pointer flex gap-5">
-			<HeaderLink href="/">Accueil</HeaderLink>
-			<HeaderLink href="/blog">Projets</HeaderLink>
-			<HeaderLink href="/about">A propos</HeaderLink>
-			<HeaderLink href="/contact">Contact</HeaderLink>
+		<div class="internal-links flex gap-5">
+			<HeaderLink class={'font-titre text-2xl text-beige hover:text-rouge cursor-pointer '} href="/">Accueil</HeaderLink>
+			<HeaderLink class={'font-titre text-2xl text-beige hover:text-rouge cursor-pointer '} href="/blog">Projets</HeaderLink>
+			<HeaderLink class={'font-titre text-2xl text-beige hover:text-rouge cursor-pointer '} href="/about">A propos</HeaderLink>
+			<HeaderLink class={'font-titre text-2xl text-beige hover:text-rouge cursor-pointer '} href="/contact">Contact</HeaderLink>
 		</div>
 						
 		<div class="social-links flex items-center gap-2">

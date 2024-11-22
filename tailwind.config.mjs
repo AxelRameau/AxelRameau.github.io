@@ -4,8 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'titre': ['Bebas', 'monospace'],
-				'creative': ['Ingrid', 'monospace'],
+				'titre': ['Bebas'],
+				'creative': ['Ingrid'],
+				'corps': 'var(--ff-rm)',
 			  },
 			  colors:{
 				"rouge": "var(--clr-rouge)",

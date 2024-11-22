@@ -10,29 +10,32 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="font-corps">
 		<Header />
 		<main>
 			<article class="flex w-11/12 mx-auto gap-20 mt-20">
-				<section class="w-1/2">
-					<div>
-						<h1 class="font-titre text-[120px] text-rouge"> Graphisme & photo </h1>
-						<h2 class="text-4xl"> UI/UX Designer & photographer </h2>
-					</div>
-					<section class="flex gap-20">
+				<div class="flex flex-col w-1/2 gap-20">
+					<section>
+						<div>
+							<h1 class="font-titre text-[120px] text-rouge"> Graphisme & photo </h1>
+							<h2 class="text-4xl"> UI/UX Designer & photographer </h2>
+						</div>
+					</section>
+					<section class="flex gap-20 ">
 						<div class="flex flex-col gap-5">
-							<h3 class="titre font-bold text-end">+100</h3>
+							<h3 class="font-titre text-4xl font-bold text-end">+100</h3>
 							<p class="text-justify">Plus de 100 projets de photographie & vidéo à mon actif. La photographie représente une vraie passion pour moi.</p>
 						</div>
 						<div class="flex flex-col gap-5">
-							<h3 class="titre font-bold text-end">+10</h3>
+							<h3 class="font-titre text-4xl font-bold text-end">+10</h3>
 							<p class="text-justify">J’ai réalisé une dizaine de projets de webdesign sur différents thèmes et avec différents style graphique.</p>
 						</div>
 					</section>
-				</section>
-				<section class="w-1/2 aspect-video">
-					<img src="img-portfolio/bunbun_mockup.jpg" alt="">
-					<div class="bouton mx-auto"> 
+					</section>
+				</div>
+				<section class="w-1/2 aspect-video relative ">
+					<img  src="img-portfolio/bunbun_mockup.jpg" alt="">
+					<div class="bouton bg-inherit absolute bottom-5 mx-auto left-80"> 
 						<a href=""> Me contacter </a> 
 					</div>
 				</section>
