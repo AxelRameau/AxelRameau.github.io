@@ -1,90 +1,315 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import HeaderLink from "../components/HeaderLink.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="font-corps">
-		<Header />
-		<main>
-			<article class="flex w-11/12 mx-auto gap-20 mt-20">
-				<div class="flex flex-col w-1/2 gap-20">
-					<section>
-						<div>
-							<h1 class="font-titre text-[120px] text-rouge"> Graphisme & photo </h1>
-							<h2 class="text-4xl"> UI/UX Designer & photographer </h2>
-						</div>
-					</section>
-					<section class="flex gap-20 ">
-						<div class="flex flex-col gap-5">
-							<h3 class="font-titre text-4xl font-bold text-end">+100</h3>
-							<p class="text-justify">Plus de 100 projets de photographie & vidéo à mon actif. La photographie représente une vraie passion pour moi.</p>
-						</div>
-						<div class="flex flex-col gap-5">
-							<h3 class="font-titre text-4xl font-bold text-end">+10</h3>
-							<p class="text-justify">J’ai réalisé une dizaine de projets de webdesign sur différents thèmes et avec différents style graphique.</p>
-						</div>
-					</section>
-					</section>
-				</div>
-				<section class="w-1/2 aspect-video relative ">
-					<img  src="img-portfolio/bunbun_mockup.jpg" alt="">
-					<div class="bouton bg-inherit absolute bottom-5 mx-auto left-80"> 
-						<a href=""> Me contacter </a> 
-					</div>
-				</section>
-			</article>
-				
-			<article class="flex flex-col w-full mx-auto mb-20 gap-10">
-				<ul class="flex flex-wrap">
-					<li class="w-1/4"><img  src="img-portfolio/bmw-axel-concours.jpg" alt="photo d'une vielle BMW"></li>
-					<li class="w-1/4"><img src="img-portfolio/lily_miroir.jpg" alt="Photo d'une fille devant son miroir prise de l'arrière en 3/4"></li>
-					<li class="w-1/4"><img src="img-portfolio/fredo_chien.jpg" alt="photo d'un homme avec un chien blanc"></li>
-					<li class="w-1/4"> <img src="img-portfolio/moto-1.jpg" alt="photo du compteur d'une moto vintage chromée"></li>
-					<li class="w-1/4"><img src="img-portfolio/motobécane-2.jpg" alt="photo de l'avant d'une motobécane"></li>
-					<li class="w-1/4"><img src="img-portfolio/post-foraine-2-2.jpg" alt="photo d'un homme jouant à un jeu, avec les pinces, à la fête foraine "></li>
-					<li class="w-1/4"><img src="img-portfolio/cherie.jpg" alt="photo d'une fille contre un arbre"></li>
-					<li class="w-1/4"> <img src="img-portfolio/chag-blanc-post.jpg" alt="photo d'un chat"></li>
-				</ul>
-				<div class="bouton mx-auto"> 
-					<a href=""> Voir + de photo </a> 
-				</div>
-			</article>
-			<article class="w-4/5 mx-auto">
-				<h2 class="font-titre text-4xl">Mes projets web </h2>
-				<ul class="flex flex-wrap gap-20  my-20">
-					<a href="bunbun.html" class="flex flex-col gap-5 w-[300px]">
-						<img class="vignette_projet" src="img-portfolio/bunbun_mockup.jpg" alt="photo d'un mac où il y'a le site de Bunbun">
-						<h2 class="font-titre text-black text-2xl text-center"> Bunbun - Cofee shop</h2>
-					</a>
-					<li class="flex flex-col gap-5 w-[300px]">
-						<img class="vignette_projet" src="img-portfolio/logo_mosbier.png" alt="logo du bar Mos&Bier">
-						<h2 class="font-titre text-black text-2xl text-center"> Mos & Bier - bar</h2>
-					</li>
-					<li class="flex flex-col gap-5 w-[300px]">
-						<img class="vignette_projet" src="img-portfolio/cover_iconographie.jpg" alt="photo où il y'a a un tableau avec des icones que j'ai réalisé sur illustrator">
-						<h2 class="font-titre text-black text-2xl text-center"> Iconographie</h2>
-					</li>
-					<li class="flex flex-col gap-5 w-[300px]">
-						<img class="vignette_projet" src="img-portfolio/ui_challenge_mockup.jpg" alt="projet 1">
-						<h2 class="font-titre text-black text-2xl text-center"> UI challenge - Realisation d'interface d'entrainement</h2>
-					</li>
-					<li class="flex flex-col gap-5 w-[300px]">
-						<img class="vignette_projet" src="img-portfolio/mockup-doom.jpg" alt="photo d'un ordinateur avec la landing page de doom que j'ai réalisé">
-						<h2 class="font-titre text-black text-2xl text-center"> Doom - Landing page</h2>
-					</li>
-		   		</ul>
-				   <div class="bouton mx-auto"> 
-					<a href=""> En voir + </a> 
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body class="font-corps">
+    <article class="">
+      <Header />
+
+      <main>
+        <article class="flex px-5 mx-auto gap-20 mt-10 md:mb-5">
+          <div class="flex flex-col gap-20">
+            <section class="flex flex-col  items-center md:items-start">
+              <div class="h-64 w-64 rounded-full bg-moi bg-cover mb-5 md:hidden"></div>
+              <div>
+                <h1 class="font-titre text-6xl md:text-9xl text-rouge text-center md:text-left">
+                  Axel Rameau
+                </h1>
+                <h2 class="text-xl md:text-3xl text-center md:text-left">
+                  UI/UX Designer & photographe
+                </h2>
+              </div>
+            </section>
+            <section class="flex gap-10">
+              <div class="flex flex-col gap-5 w-1/2">
+                <h3 class="number font-titre">+</h3>
+                <p class="text-justify text-sm md:text-base">
+                  Plus de 100 projets de photographie & vidéo à mon actif. La
+                  photographie représente une vraie passion pour moi.
+                </p>
+              </div>
+              <div class="flex flex-col gap-5 w-1/2">
+                <h3 class="number2 font-titre">+</h3>
+                <p class="text-justify text-[14px] md:text-base">
+                  J’ai réalisé une dizaine de projets de webdesign sur
+                  différents thèmes et avec différents style graphique.
+                </p>
+              </div>
+            </section>
+          </div>
+          <img
+          class="hidden md:flex w-1/2 cover"
+          src="img-portfolio/bunbun_mockup.jpg"
+          alt=""
+        />
+        </article>
+      </main>
+
+      <article class="base-slider relative px-5 h-fit my-5 flex md:hidden">
+        <section
+          class="slider x mandatory-scroll-snapping h-[400px] w-full text-9xl"
+          dir="ltr"
+        >
+          <div class="slider-item bg-gallerie1 bg-cover bg-center"></div>
+          <div class="slider-item bg-gallerie2 bg-cover bg-center"></div>
+          <div class="slider-item bg-gallerie3 bg-cover bg-center"></div>
+          <div class="slider-item bg-gallerie4 bg-cover bg-center"></div>
+          <div class="slider-item bg-gallerie5 bg-cover bg-center"></div>
+        </section>
+
+        <section class="flex justify-between absolute top-1/2 w-full px-8">
+          <a
+            class="prev bg-red-500 text-3xl"
+            onclick="window.slider.moinsSlides()">&#10094;</a
+          >
+          <a
+            class="next bg-red-500 text-3xl"
+            onclick="window.slider.plusSlides()">&#10095;</a
+          >
+        </section>
+      </article>
+
+      <div class="flex justify-center w-full mb-5">
+        <div class="bouton">
+          <a class="texte__btn" href=""> Voir + de photo </a>
+        </div>
+      </div>
+
+
+      <article class="bg-rouge py-10 px-10 flex flex-col gap-5">
+        <section class="flex flex-col gap-5">
+          <img
+            src="img-portfolio/bunbun_mockup.jpg"
+            alt="Mockup projet de maquettte pour un café Kawaiis"
+          />
+          <div class="flex flex-col gap-2">
+            <h2 class="font-titre text-3xl">
+              BunBun - Maquette
+            </h2>
+            <p class="font-corps">
+              Ce projet a été réalisé dans le cadre de mes études. L'objectif était de concevoir l'interface utilisateur (UI) d'un coffee shop fictif au thème Kawaii. Le propriétaire de BunBun souhaite que l'identité graphique existante soit bien visible sur le site, qui doit rester simple et efficace en permettant aux visiteurs de consulter facilement la carte et de comprendre le concept du coffee shop.
+            </p>
+          </div>
+        </section>
+        <section>
+          <img src="img-portfolio/bunbun_landing.jpg" alt="" />
+          <p class="text-black/70 text-sm italic">Maquette de BunBun</p>
+        </section>
+      </article>
+
+      <article class="bg-noir py-10 px-10 flex flex-col gap-5 text-beige">
+        <section class="flex flex-col gap-5">
+          <img
+            src="img-portfolio/mockup-doom.jpg"
+            alt="Mockup projet de maquettte pour un café Kawaiis"
+          />
+          <div class="flex flex-col gap-2">
+            <h2 class="font-titre text-3xl">
+              Doom - landing page
+            </h2>
+            <p class="font-corps">
+              Une landing page est la page d'un site accessible via un lien, souvent pour promouvoir un produit, une personne ou un album. 
+              <br /> <br />
+              Ce projet, mon premier en UI design à été réalisé dans le cadre de mes études et utilise des images non créées par moi. J'ai choisi de faire mon site sur Doom, un jeu de tir à la première personne, dans un univers sombre et post-apocalyptique, où l'on lutte contre des créatures démoniaques pour sauver l'humanité.
+            </p>
+          </div>
+        </section>
+        <section>
+          <img src="img-portfolio/site_doom.png" alt="" />
+          <p></p>
+        </section>
+      </article>
+
+      <article class="flex flex-col justify-center gap-10 px-5 my-16">
+        <h2 class="font-titre text-4xl">Autres projets</h2>
+        <ul class="flex flex-wrap justify-center md:justify-start gap-10">
+          <li class="flex flex-col">
+            <a href="bunbun.html">
+              <img
+                class="vignette_projet"
+                src="img-portfolio/bunbun_mockup.jpg"
+                alt="photo d'un mac où il y'a le site de Bunbun"
+              />
+            </a>
+            <h2 class="font-titre text-black text-2xl">Bunbun - Cofee shop</h2>
+          </li>
+          <li class="flex flex-col">
+            <a href="bunbun.html">
+              <img
+                class="vignette_projet"
+                src="img-portfolio/logo_mosbier.png"
+                alt="logo du bar Mos&Bier"
+              />
+            </a>
+            <h2 class="font-titre text-black text-2xl">Mos & Bier - bar</h2>
+          </li>
+        </ul>
+
+        <div class="flex justify-center w-full mb-5">
+          <div class="bouton">
+            <a class="texte__btn" href=""> Voir + de projets </a>
+          </div>
+        </div>
+      </article>
+
+      <Footer />
+    </article>
+
+    <script>
+      class Slider {
+        constructor() {
+          this.slideIndex = 0;
+          this.slides = document.getElementsByClassName("slider-item");
+          this.showSlides(this.slideIndex);
+        }
+
+        showSlides(n) {
+          if (n >= this.slides.length) {
+            this.slideIndex = 0;
+          }
+          if (n < 0) {
+            this.slideIndex = this.slides.length - 1;
+          }
+          for (let i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.display = "none";
+          }
+          this.slides[this.slideIndex].style.display = "block";
+        }
+
+        plusSlides(n = 1) {
+          this.showSlides((this.slideIndex += n));
+        }
+
+        moinsSlides(n = 1) {
+          this.showSlides((this.slideIndex -= n));
+        }
+
+        currentSlide(n) {
+          this.showSlides((this.slideIndex = n));
+        }
+      }
+
+      const slider = new Slider();
+      window.slider = slider;
+    </script>
+
+    <style>
+      .base-slider {
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column nowrap;
+        font-family: monospace;
+      }
+      .slider {
+        display: flex;
+        margin: 0em auto;
+        outline: 1px dashed lightgray;
+        flex: none;
+        overflow: auto;
+      }
+      .x {
+        flex-flow: row nowrap;
+        overflow-y: hidden;
+      }
+
+      /* scroll-snap */
+      .x.mandatory-scroll-snapping {
+        scroll-snap-type: x mandatory;
+      }
+
+      .slider-item {
+        text-align: center;
+        padding-top: 80px;
+        scroll-snap-align: center;
+        flex: none;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .bouton {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 0.9rem 2rem;
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--clr-rouge);
+        color: ghostwhite;
+      }
+
+      .bouton, .texte__btn {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+      }
+
+      .bouton:hover, .texte__btn {
+        color: white;
+      }
+
+      .bouton::before,
+      .bouton::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .bouton::before {
+        content: "";
+        background: #000;
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+
+      .bouton:hover::before {
+        transform: translate3d(100%, 0, 0);
+      }
+    </style>
+  </body>
 </html>

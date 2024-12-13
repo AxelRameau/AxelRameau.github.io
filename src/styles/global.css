@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,54 +6,97 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
- :root {
-	--clr-beige : #FFFEF9; 
-	--clr-noir : #1B1616; 
-	--clr-rouge : #FF5757; 
-	--ff-rm : "Roboto Mono", sans-serif;
+:root {
+  --clr-beige: #fffef9;
+  --clr-noir: #1b1616;
+  --clr-rouge: #ff5757;
+  --ff-rm: "Roboto Mono", sans-serif;
 }
 
+@layer base {
+  @font-face {
+    font-family: "Bebas";
+    src: url(./fonts/Bebas-regular.ttf);
+  }
+  @font-face {
+    font-family: "Ingrid";
+    src: url(./fonts/IngridDarling-Regular.ttf);
+  }
+}
 
- @layer base {
-	@font-face {
-		font-family: 'Bebas';
-		src: url(./fonts/Bebas-regular.ttf);
-	}
-	@font-face {
-		font-family: 'Ingrid';
-		src: url(./fonts/IngridDarling-Regular.ttf);
-	}
- }
-
+@layer utilities {
+    .hamburger-toggle {
+      @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+    }
+}
 
 @layer components {
-	.bouton {
-		@apply bg-beige hover:bg-rouge border-2 border-rouge w-fit h-fit px-6 py-2 rounded-2xl font-bold text-rouge hover:text-beige text-2xl cursor-pointer ;
-	  }
-	.titre{
-	  @apply font-bold text-4xl;
-	}
-	.vignette_projet{
-		@apply w-[300px] aspect-square object-cover;
-	  }
-	  .sr-only {
-		border: 0;
-		padding: 0;
-		margin: 0;
-		position: absolute !important;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-		/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-		clip: rect(1px 1px 1px 1px);
-		/* maybe deprecated but we need to support legacy browsers */
-		clip: rect(1px, 1px, 1px, 1px);
-		/* modern browsers, clip-path works inwards from each corner */
-		clip-path: inset(50%);
-		/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-		white-space: nowrap;
-	}
+  /* .bouton {
+    @apply bg-beige hover:bg-rouge border-2 border-rouge w-fit h-fit px-4 py-1 rounded-lg md:px-6 md:py-2 md:rounded-2xl font-bold text-rouge hover:text-beige text-xl md:text-2xl cursor-pointer;
+  } */
+  .titre {
+    @apply font-bold text-4xl;
+  }
+  .vignette_projet {
+    @apply w-[400px] aspect-square object-cover;
+  }
+  
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  .number {
+    animation: counter 3s forwards ease-in-out;
+    counter-reset: num var(--num);
+    font: 800 40px system-ui;
+  }
+  .number::after, .number2::after {
+    content: counter(num);
+  }
+  
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 100;
+    }
+  }
+
+  .number2 {
+    animation: counter2 3s forwards ease-in-out;
+    counter-reset: num var(--num);
+    font: 800 40px system-ui;
+  }
+  
+  @keyframes counter2 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 10;
+    }
+  }
+
+  
+
+  .sr-only {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px 1px 1px 1px);
+    /* maybe deprecated but we need to support legacy browsers */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* modern browsers, clip-path works inwards from each corner */
+    clip-path: inset(50%);
+    /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+    white-space: nowrap;
+  }
 }
-
-
-
