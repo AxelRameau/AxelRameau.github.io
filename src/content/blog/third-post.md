@@ -15,7 +15,7 @@ Ici, on trouve l'interface d'un tableau de bord pour une voiture, une page panie
 </div>
 
 <div class="flex flex-col md:flex-row items-center w-full gap-5 mt-10">
-    <img class="md:w-1/3  shadow-xl rounded-2xl" src="/img-portfolio/connexion.png" alt="Texte alternatif" title="Le titre de mon image">
-    <img class="md:w-1/3 shadow-xl rounded-2xl" src="/img-portfolio/hud-voiture.png" alt="Texte alternatif" title="Le titre de mon image">
-    <img class="md:w-1/3 shadow-xl rounded-2xl" src="/img-portfolio/paiement.png" alt="Texte alternatif" title="Le titre de mon image">
+    <img class="md:w-1/3  shadow-xl rounded-2xl" src="/img-portfolio/connexion.png" alt="Réalisation d'une maquette d'une page d'inscription">
+    <img class="md:w-1/3 shadow-xl rounded-2xl" src="/img-portfolio/hud-voiture.png" alt="Réalisation d'une maquette d'un HUD pour l'interface d'une voiture">
+    <img class="md:w-1/3 shadow-xl rounded-2xl" src="/img-portfolio/paiement.png" alt="Réalisation d'une maquette pour une page de paiement">
 </div>

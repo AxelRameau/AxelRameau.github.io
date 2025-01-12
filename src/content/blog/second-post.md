@@ -9,6 +9,6 @@ J'ai réalisé cette iconographie dans le cadre d'un projet étudiant qui avait 
 Ensuite, j'ai dû attribuer des légendes désignant autre chose que l'icône d'origine et réaliser un rébus graphique légendé.
 
 <div class="flex flex-col md:flex-row justify-center gap-5 mt-10">
-    <img class="w-[400px] h-[600px]" src="/img-portfolio/icones1.jpg" alt="Texte alternatif" title="Le titre de mon image">
-    <img class="w-[400px] h-[600px]" src="/img-portfolio/icones2.jpg" alt="Texte alternatif" title="Le titre de mon image">
+    <img class="w-[400px] h-[600px]" src="/img-portfolio/icones1.jpg" alt="Icônes réalisé dans un style graphique réalisé à la main">
+    <img class="w-[400px] h-[600px]" src="/img-portfolio/icones2.jpg" alt="Mélange d'icônes à partir de l'image précédante">
 </div>

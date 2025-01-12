@@ -9,5 +9,5 @@ Pour ce projet j'ai dû réaliser une landing page, mais c'est quoi une "landing
 C'est un projet de mise en page, or, les images utilisées sont utilisées dans le cadre universitaire, elles n'ont pas été réalisés par ma personne. Il a été réalisé dans le cadre de mes études où j'ai dû réaliser un site one-page sur un jeu vidéo de mon choix. Personnellement, j'ai décidé de faire mon site sur le jeu Doom, ayant un univers graphique post-apocalyptique très sombre. Pour ceux qui ne connaissent pas, Doom est une série de jeu vidéo à la première personne où on évolue dans un univers infesté de créatures démoniaques tout droit sorties des enfers. Dans ce monde, nous sommes le seul espoir pour sauver l'humanité. 
 
 <div class="flex justify-center mt-10">
-  <img src="/img-portfolio/site_doom.png" alt="Texte alternatif" title="Le titre de mon image">
+  <img src="/img-portfolio/site_doom.png" alt="Maquette de la landing page de doom - projet tutoré">
 </div>
