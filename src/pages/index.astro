@@ -1,11 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import HeaderLink from "../components/HeaderLink.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from 'astro:content';
-// import FormattedDate from '../../components/FormattedDate.astro';
 ---
 
 <!doctype html>
@@ -123,35 +120,7 @@ import { getCollection } from 'astro:content';
         </li>
       </ul>
 
-      <!-- <article class="base-slider relative px-5 h-fit my-10 flex md:hidden">
-        <section
-          class="slider x mandatory-scroll-snapping h-[400px] w-full text-9xl"
-          dir="ltr"
-        >
-          <div class="slider-item bg-gallerie1 bg-cover bg-center"></div>
-          <div class="slider-item bg-gallerie2 bg-cover bg-center"></div>
-          <div class="slider-item bg-gallerie3 bg-cover bg-center"></div>
-          <div class="slider-item bg-gallerie4 bg-cover bg-center"></div>
-          <div class="slider-item bg-gallerie5 bg-cover bg-center"></div>
-        </section>
-
-        <section class="flex justify-between absolute top-1/2 w-full px-8">
-          <a
-            class="prev bg-red-500/50 text-3xl"
-            onclick="window.slider.moinsSlides()">&#10094;</a
-          >
-          <a
-            class="next bg-red-500/50 text-3xl"
-            onclick="window.slider.plusSlides()">&#10095;</a
-          >
-        </section>
-      </article>
-
-      <div class="flex justify-center w-full mb-10">
-        <div class="bouton w-fit">
-          <a class="texte__btn" href=""> Voir + de photo </a>
-        </div>
-      </div> -->
+      
 
       <article class="bg-rouge py-10 px-10 flex flex-col gap-10 lg:gap-20">
         <section class="flex flex-col gap-5 lg:gap-10 lg:w-4/5">
@@ -273,43 +242,7 @@ import { getCollection } from 'astro:content';
       <Footer />
     </article>
 
-    <!-- <script>
-      class Slider {
-        constructor() {
-          this.slideIndex = 0;
-          this.slides = document.getElementsByClassName("slider-item");
-          this.showSlides(this.slideIndex);
-        }
 
-        showSlides(n) {
-          if (n >= this.slides.length) {
-            this.slideIndex = 0;
-          }
-          if (n < 0) {
-            this.slideIndex = this.slides.length - 1;
-          }
-          for (let i = 0; i < this.slides.length; i++) {
-            this.slides[i].style.display = "none";
-          }
-          this.slides[this.slideIndex].style.display = "block";
-        }
-
-        plusSlides(n = 1) {
-          this.showSlides((this.slideIndex += n));
-        }
-
-        moinsSlides(n = 1) {
-          this.showSlides((this.slideIndex -= n));
-        }
-
-        currentSlide(n) {
-          this.showSlides((this.slideIndex = n));
-        }
-      }
-
-      const slider = new Slider();
-      window.slider = slider;
-    </script> -->
 
     <style>
       .base-slider {
