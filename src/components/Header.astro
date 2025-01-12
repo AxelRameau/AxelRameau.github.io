@@ -3,8 +3,8 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header>
-  <nav class="relative px-4 py-2 md:py-4 flex justify-between items-center bg-black mx-5 my-5 rounded-lg"> 
+<header class="fixed w-full top-0 z-50 lg:bg-noir">
+  <nav class="relative px-5 py-2 md:py-4 flex justify-between items-center bg-noir mx-5 my-5 rounded-lg"> 
 	<h2 class="text-beige text-xl"><a href="/">{SITE_TITLE}</a></h2>
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center text-beige p-3">
@@ -58,7 +58,7 @@ import { SITE_TITLE } from "../consts";
 			alt="Découvre mes photos"
 		  />
 		</a>
-		<a href='https://www.behance.net/43a086d5"' target="_blank">
+		<a href='https://www.behance.net/43a086d5' target="_blank">
 		  <span class="sr-only"
 			>Tu peux aussi aller sur mon Behance pour voir mes autres projets</span
 		  >
@@ -99,10 +99,10 @@ import { SITE_TITLE } from "../consts";
           <li class="">
             <HeaderLink
               class={"font-titre text-3xl text-noir hover:text-rouge cursor-pointer "}
-              href="/">Accueil</HeaderLink
+              href="./">Accueil</HeaderLink
             >
           </li>
-          <li class="">
+          <li class="m-0">
             <HeaderLink
               class={"font-titre text-3xl text-noir hover:text-rouge cursor-pointer "}
               href="/blog">Projets</HeaderLink
@@ -129,7 +129,7 @@ import { SITE_TITLE } from "../consts";
 				alt="Découvre mes photos"
 			  />
 			</a>
-			<a href='https://www.behance.net/43a086d5"' target="_blank">
+			<a href='https://www.behance.net/43a086d5' target="_blank">
 			  <span class="sr-only"
 				>Tu peux aussi aller sur mon Behance pour voir mes autres projets</span
 			  >

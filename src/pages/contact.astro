@@ -9,38 +9,39 @@ import Footer from '../components/Footer.astro';
 	description="N'hésitez pas à me contacter si vous voulez profiter de mes services en création numérique et en développement web." 
 ></BaseHead>
 <Header />
-<h2 class="titre text-rouge text-center mx-auto mt-20 mb-10"> Besoin de mes services ? </h2> 
-        <article class="flex gap-10 w-4/5 rounded-2xl shadow-[0_7px_29px_0px_rgba(100,100,111,0.2)] mx-auto py-10 px-20">
-            <section class="flex flex-col w-1/2">
+<h2 class="titre text-rouge text-center mx-auto mt-40 mb-10"> Besoin de mes services ? </h2> 
+        <article class="flex gap-10 w-4/5 rounded-2xl shadow-[0_7px_29px_0px_rgba(100,100,111,0.2)] mx-auto py-10 px-20 mb-20 bg-beige">
+            <section class="flex flex-col lg:w-1/2 w-full items-center">
                 <h2 class="titre mb-10"> Une question, un besoin, c'est ici que Ca se passe !</h2>
-                <form>
-                    <div class="flex flex-col gap-5 font-corps font-bold">
+                <form class="flex flex-col gap-5 font-corps font-bold w-fit">
                         <div class="flex gap-5">
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-2 w-full">
                                 <label for="nom"> Nom </label>
-                                <input class="pl-2 py-2 rounded-lg outline-none text-rouge-base placeholder:text-gray-300 border-2 border-rouge-base border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="text" name="nom" placeholder="Blanc">
+                                <input class="pl-2 py-2 rounded-lg placeholder:text-gray-300 border-2 border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100 w-36" type="text" name="nom" placeholder="Blanc">
                             </div>
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-2 w-full">
                                 <label for="prénom"> Prénom </label>
-                                <input class="pl-2 py-2 rounded-lg outline-none text-rouge-base placeholder:text-gray-300 border-2 border-rouge-base border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="text" name="prénom" placeholder="Jean">
+                                <input class="pl-2 py-2 rounded-lg placeholder:text-gray-300 border-2 border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100 w-36" type="text" name="prénom" placeholder="Jean">
                             </div>
                         </div>  
                         <div class="flex gap-5">
                             <div class="flex flex-col gap-2">
                                 <label for="num"> Numéro de téléphone </label>
-                                <input class="pl-2 py-2 rounded-lg outline-none text-rouge-base placeholder:text-gray-300 border-2 border-rouge-base border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="tel" name="num" placeholder="06 59 87 5563">
+                                <input class="pl-2 py-2 rounded-lg  placeholder:text-gray-300 border-2 border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="tel" name="num" placeholder="06 59 87 5563">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="mail"> Adresse e-mail </label>
-                                <input class="pl-2 py-2 rounded-lg outline-none text-rouge-base placeholder:text-gray-300 border-2 border-rouge-base border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="email" name="mail" placeholder="exemple@gmail.com">
+                                <input class="pl-2 py-2 rounded-lg  placeholder:text-gray-300 border-2 border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="email" name="mail" placeholder="exemple@gmail.com">
                             </div>
                         </div>
-                        <input class="pl-2 py-2 h-64 w-[470px] rounded-lg outline-none text-rouge-base placeholder:text-gray-300 border-2 border-rouge-base border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100" type="text" name="demande" placeholder="Bonjour, j'aurais besoin de...">
+                        <input class="pl-2 py-2 h-64 w-[470px] rounded-lg  placeholder:text-gray-300 border-2 border-solid font-semibold focus:border-b-4 focus:pt-2.5 transition-all duration-100 pb-52"
+                        type="text" name="demande" placeholder="Bonjour, j'aurais besoin de...">
+
+
                         <input class="px-8 py-4 w-fit rounded-lg text-rouge border-2 border-rouge bg-beige hover:bg-rouge hover:text-beige cursor-pointer" type="submit" value="Envoyer">
-                    </div>
                 </form>
             </section>
-            <section class="w-1/2 flex items-center">
+            <section class="w-1/2 lg:flex items-center hidden">
                 <img class="rounded-tr-[32px] rounded-bl-[32px] rounded-br-lg rounded-tl-lg" src="img-portfolio
 				/chag-blanc-post.jpg" alt="photo de moi qui vous salut">
             </section>

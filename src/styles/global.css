@@ -35,8 +35,9 @@
     @apply bg-beige hover:bg-rouge border-2 border-rouge w-fit h-fit px-4 py-1 rounded-lg md:px-6 md:py-2 md:rounded-2xl font-bold text-rouge hover:text-beige text-xl md:text-2xl cursor-pointer;
   } */
   .titre {
-    @apply font-bold text-4xl;
+    @apply font-titre text-3xl lg:text-4xl;
   }
+
   .vignette_projet {
     @apply w-[400px] aspect-square object-cover;
   }
@@ -76,7 +77,7 @@
       --num: 0;
     }
     to {
-      --num: 10;
+      --num: 30;
     }
   }
 

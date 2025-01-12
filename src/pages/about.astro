@@ -1,79 +1,174 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<BaseHead 
-	title="A propos" 
-	description="Découvrez qui je suis, mes compétences et ce que je peux vous apporter" 
-></BaseHead>
+<BaseHead
+  title="A propos"
+  description="Découvrez qui je suis, mes compétences et ce que je peux vous apporter"
+/>
 <Header />
-<article class="flex gap-20 w-4/5 mx-auto mt-20 mb-10">
-	<section class="w-[40%]">
-		 <img class="" src="img-portfolio/moi.jpg" alt="moi">
-	</section>
-	<section class="flex flex-col w-[60%]">
-		<h1 class="font-titre text-[120px] text-rouge"> Axel Rameau </h1>
-		<p class="">Salut moi c'est Axel, je suis photographe, webdesigner, intégrateur et graphiste. J'aime créer, inventer et imaginer. Quand je commence un projet j'ai pour coeur de m'y donner à 100%. Je vous invite a consulter <a href=""></a> mon cv </p>
-		<div class="mt-20 w-full flex justify-end"> 
-			<img class="pr-5" src="img-portfolio/lien_cv.png" alt="fleche">
-		</div>
-	</section>
+<main class="flex flex-col gap-20 mt-44 mb-40 bg-beige">
+<article class="flex flex-col lg:flex-row lg:gap-20 gap-5 w-4/5 mx-auto mb-20">
+  <section class="lg:w-[40%]">
+    <img class="rounded-lg" src="moi-classe.jpg" alt="moi" />
+  </section>
+  <section class="flex flex-col lg:w-[60%]">
+    <h1 class="font-titre text-7xl md:text-7xl  2xl:text-9xl text-rouge text-center">Axel Rameau</h1>
+    <p class="">
+      Salut moi c'est Axel, je suis photographe, webdesigner, intégrateur et
+      graphiste. J'aime créer, inventer et imaginer. Quand je commence un projet
+      j'ai pour coeur de m'y donner à 100%. Je vous invite a consulter <a
+        href=""></a> mon cv
+    </p>
+    <div class="mt-20 w-full hidden xl:flex justify-end">
+      <img class="pr-5" src="img-portfolio/lien_cv.png" alt="fleche" />
+    </div>
+  </section>
 </article>
-<article>
-	<section class="flex flex-col w-4/5 mx-auto mb-20">
-		<h2 class="font-titre text-4xl text-black text-center mb-10"> Une formation <span class="text-rouge">Polyvalente</span> </h2>
-		<p>Je suis étudiant en 2ème année de <strong> BUT Métiers du Multimedia et de l’internet,</strong> une formation complète qui m’a permis d’acquérir de nombreuses compétences en : </p>
-		<ul class="list-disc">
-			<li class="list-disc"> <p><strong>Webdesign</strong>  (UI/ UX Design)</p> </li>
-			<li class="list-disc"> <p><strong>Audiovisuel</strong> (Photographie/ Vidéo/ Montage)</p> </li>
-			<li class="list-disc"><p><strong>Intégration & Développement Front</strong> (HTML, CSS, JS)</p></li>
-		</ul>
-	</section>
-	<section class="w-4/5 mx-auto">
-		<h2 class="font-titre text-black text-4xl text-center mb-10"> En quoi je peux vous aider ? </h2>
-		<div class="flex flex-wrap mx-auto gap-8">
-			<ul class="w-80 list-disc"> 
-				<h2 class="text-center font-titre text-3xl mb-5"> Webdesign</h2>
-				<li class="list-disc"> <p>Wireframe</p> </li>
-				<li class="list-disc"> <p>Prototype</p> </li>
-				<li class=""> <p>Composants réutilisable</p> </li>
-				<li class=""> <p>Design system</p> </li>
-			</ul>
-			<ul class="w-80 list-disc"> 
-				<h2 class="text-center font-titre text-3xl mb-5"> Web</h2>
-				<li class=""> <p>Création de site en HTML & CSS</p> </li>
-				<li class=""> <p>Pages dynamiques en JS</p> </li>
-				<li class=""> <p>Utilisation de pré-processeur (Tailwind/ SASS) </p> </li>
-				<li class=""> <p>Utilisation de PHP & MySQL pour faire le lien avec des bases de données</p> </li>
-				<li class=""> <p>Utilisation de CMS (Wordpress)</p> </li>
-				<li class=""> <p>Référencement</p> </li>
-			</ul>
-			<ul class="w-80 list-disc"> 
-				<h2 class="text-center font-titre text-3xl mb-5"> Audiovisuel</h2>
-				<li class=""> <p>Prise de photographie & vidéo</p> </li>
-				<li class=""> <p>Montage vidéo</p> </li>
-				<li class=""> <p>Motion design</p> </li>
-				<li class=""> <p>Prise de son</p> </li>
-				<li class=""> <p>Retouche photo</p> </li>
-				<li class=""> <p>Montage photo</p> </li>
-				<li class=""> <p>Community management</p> </li>
-				<li class=""> <p>Création de contenus pour les réseaux sociaux</p> </li>
-			</ul>
-			<ul class="w-80 list-disc"> 
-				<h2 class="text-center text-3xl mb-5 font-titre"> Graphisme</h2>
-				<li class=""> <p>Création d’identité visuel</p> </li>
-				<li class=""> <p>Création d’iconographie</p> </li>
-				<li class=""> <p>Création de visuel “print” (carte de visite, flyer...)</p> </li>
-			</ul>
-			<ul class="w-80 list-disc"> 
-				<h2 class="font-titre text-center text-3xl mb-5"> Autre </h2>
-				<li class=""> <p>Création de dossier de presse,</p> </li>
-			</ul>
+
+
+<article class="mx-10">
+  <section class="flex flex-col w-11/12 mx-auto mb-20">
+    <h2 class="font-titre text-4xl text-black text-center mb-10">
+      Une formation <span class="text-rouge">Polyvalente</span>
+    </h2>
+    <p>
+      Je suis étudiant en 3ème année de <strong>
+        BUT Métiers du Multimedia et de l’internet,</strong
+      > une formation complète qui m’a permis d’acquérir de nombreuses compétences
+      en :
+    </p>
+    <ul class="list-disc">
+      <li class="list-disc">
+        <p><strong>Webdesign</strong> (UI/ UX Design)</p>
+      </li>
+      <li class="list-disc">
+        <p><strong>Audiovisuel</strong> (Photographie/ Vidéo/ Montage)</p>
+      </li>
+      <li class="list-disc">
+        <p>
+          <strong>Intégration & Développement Front</strong> (HTML, CSS, JS)
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section class="w-11/12 mx-auto">
+    <h2 class="font-titre text-black text-4xl text-center mb-10">
+      En quoi je peux <span class="text-rouge"> vous aider ? </span>
+    </h2>
+    <div class="flex flex-wrap justify-center gap-10">
+      <ul class="w-72 list-disc">
+        <h2 class="text-center font-titre text-3xl mb-5">Webdesign</h2>
+        <li class="list-disc"><p>Wireframe</p></li>
+        <li class="list-disc"><p>Prototype</p></li>
+        <li class=""><p>Composants réutilisable</p></li>
+        <li class=""><p>Design system</p></li>
+      </ul>
+      <ul class="w-72 list-disc">
+        <h2 class="text-center font-titre text-3xl mb-5">Web</h2>
+        <li class=""><p>Création de site en HTML & CSS</p></li>
+        <li class=""><p>Pages dynamiques en JS</p></li>
+        <li class=""><p>Utilisation de pré-processeur (Tailwind/ SASS)</p></li>
+        <li class="">
+          <p>
+            Utilisation de PHP & MySQL pour faire le lien avec des bases de
+            données
+          </p>
+        </li>
+        <li class=""><p>Utilisation de CMS (Wordpress)</p></li>
+        <li class=""><p>Référencement</p></li>
+      </ul>
+      <ul class="w-72 list-disc">
+        <h2 class="text-center font-titre text-3xl mb-5">Audiovisuel</h2>
+        <li class=""><p>Prise de photographie & vidéo</p></li>
+        <li class=""><p>Montage vidéo</p></li>
+        <li class=""><p>Motion design</p></li>
+        <li class=""><p>Prise de son</p></li>
+        <li class=""><p>Retouche photo</p></li>
+        <li class=""><p>Montage photo</p></li>
+        <li class=""><p>Community management</p></li>
+        <li class=""><p>Création de contenus pour les réseaux sociaux</p></li>
+      </ul>
+      <ul class="w-72 list-disc">
+        <h2 class="text-center text-3xl mb-5 font-titre">Graphisme</h2>
+        <li class=""><p>Création d’identité visuel</p></li>
+        <li class=""><p>Création d’iconographie</p></li>
+        <li class="">
+          <p>Création de visuel “print” (carte de visite, flyer...)</p>
+        </li>
+      </ul>
+      <ul class="w-72 list-disc">
+        <h2 class="font-titre text-center text-3xl mb-5">Autre</h2>
+        <li class=""><p>Création de dossier de presse,</p></li>
+      </ul>
+    </div>
+  </section>
+</article>
+
+
+<div class="flex justify-center w-full mb-5">
+	<div class="bouton">
+	  <a class="texte__btn" href="/blog"> Découvrir mes projets </a>
 	</div>
-	</section>
-</article>
-<div class="mt-20 mb-16 mx-auto bouton"> <a href="projets.html"> Voir mes projets </p> </div>
+  </div>
+</main>
 
 <Footer />
+
+<style>
+	.bouton {
+	  outline: none;
+	  cursor: pointer;
+	  border: none;
+	  padding: 0.9rem 2rem;
+	  margin: 0;
+	  font-family: inherit;
+	  font-size: inherit;
+	  position: relative;
+	  display: inline-block;
+	  letter-spacing: 0.05rem;
+	  font-weight: 700;
+	  font-size: 17px;
+	  border-radius: 8px;
+	  overflow: hidden;
+	  background: var(--clr-rouge);
+	  color: ghostwhite;
+	}
+
+	.bouton,
+	.texte__btn {
+	  position: relative;
+	  z-index: 10;
+	  transition: color 0.4s;
+	}
+
+	.bouton:hover,
+	.texte__btn {
+	  color: white;
+	}
+
+	.bouton::before,
+	.bouton::after {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 0;
+	}
+
+	.bouton::before {
+	  content: "";
+	  background: #000;
+	  width: 120%;
+	  left: -10%;
+	  transform: skew(30deg);
+	  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	}
+
+	.bouton:hover::before {
+	  transform: translate3d(100%, 0, 0);
+	}
+  </style>

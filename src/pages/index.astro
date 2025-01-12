@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import HeaderLink from "../components/HeaderLink.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from 'astro:content';
+// import FormattedDate from '../../components/FormattedDate.astro';
 ---
 
 <!doctype html>
@@ -12,49 +14,116 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
 
-  <body class="font-corps">
+  <body class="font-corps bg-beige">
     <article class="">
       <Header />
 
-      <main>
-        <article class="flex px-5 mx-auto gap-20 mt-10 md:mb-5">
-          <div class="flex flex-col gap-20">
-            <section class="flex flex-col  items-center md:items-start">
-              <div class="h-64 w-64 rounded-full bg-moi bg-cover mb-5 md:hidden"></div>
+      <main class="mt-48 mb-10 md:mb-20">
+        <article class="flex w-full px-5 mx-auto gap-20 md:mb-5">
+          <div class="flex flex-col gap-20 w-full md:w-1/2 pl-10">
+            <section class="flex flex-col w-full items-center md:items-start">
+              <div
+                class="h-64 w-64 rounded-full bg-moi bg-cover mb-5 md:hidden"
+              >
+              </div>
               <div>
-                <h1 class="font-titre text-6xl md:text-9xl text-rouge text-center md:text-left">
+                <h1
+                  class="font-titre text-5xl md:text-9xl text-rouge text-center md:text-left"
+                >
                   Axel Rameau
                 </h1>
-                <h2 class="text-xl md:text-3xl text-center md:text-left">
+                <h2 class="text-xl md:text-4xl text-center md:text-left">
                   UI/UX Designer & photographe
                 </h2>
               </div>
             </section>
-            <section class="flex gap-10">
+            <section class="flex gap-10 w-full">
               <div class="flex flex-col gap-5 w-1/2">
-                <h3 class="number font-titre">+</h3>
-                <p class="text-justify text-sm md:text-base">
+                <h3 class="number font-titre md:text-6xl">+</h3>
+                <p class="text-justify text-[14px] md:text-[16px]">
                   Plus de 100 projets de photographie & vidéo à mon actif. La
-                  photographie représente une vraie passion pour moi.                </p>
+                  photographie représente une vraie passion pour moi.
+                </p>
               </div>
               <div class="flex flex-col gap-5 w-1/2">
-                <h3 class="number2 font-titre">+</h3>
-                <p class="text-justify text-[14px] md:text-base">
-                  J’ai réalisé une dizaine de projets de webdesign sur
+                <h3 class="number2 font-titre md:text-6xl">+</h3>
+                <p class="text-justify text-[14px] md:text-[16px]">
+                  J’ai réalisé une trentaine de projets de webdesign sur
                   différents thèmes et styles graphiques.
                 </p>
               </div>
             </section>
           </div>
-          <img
-          class="hidden md:flex w-1/2 cover"
-          src="img-portfolio/bunbun_mockup.jpg"
-          alt=""
-        />
+
+          <div class="h-auto md:w-2/3 w-full hidden md:flex">
+            <img
+              class="w-full h-full object-cover object-left"
+              src="moi-classe.jpg"
+              alt=""
+            />
+          </div>
         </article>
       </main>
 
-      <article class="base-slider relative px-5 h-fit my-5 flex md:hidden">
+      <ul class="hidden md:flex md:flex-wrap justify-center gap-2 mb-5">
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/bmw-axel-concours.jpg"
+            alt="Volcano and lava field against a stormy sky"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/chag-blanc-post.jpg"
+            alt="Guy on a bike ok a wooden bridge with a forest backdrop"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/cherie.jpg"
+            alt="Person standing alone in a misty forest"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/fredo_chien.jpg"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/lily_miroir.jpg"
+            alt="Street scene with person walking and others on motorbikes, all wearing masks"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/motobécane-2.jpg"
+            alt="Fashionable-looking girl with blond hair and pink sunglasses"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/moto-1.jpg"
+            alt="Fashionable-looking girl with blond hair and pink sunglasses"
+          />
+        </li>
+        <li class="w-1/5 aspect-square">
+          <img
+            class="w-full object-cover transition duration-1000"
+            src="img-portfolio/moi.jpg"
+            alt="Fashionable-looking girl with blond hair and pink sunglasses"
+          />
+        </li>
+      </ul>
+
+      <article class="base-slider relative px-5 h-fit my-10 flex md:hidden">
         <section
           class="slider x mandatory-scroll-snapping h-[400px] w-full text-9xl"
           dir="ltr"
@@ -68,95 +137,135 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
         <section class="flex justify-between absolute top-1/2 w-full px-8">
           <a
-            class="prev bg-red-500 text-3xl"
+            class="prev bg-red-500/50 text-3xl"
             onclick="window.slider.moinsSlides()">&#10094;</a
           >
           <a
-            class="next bg-red-500 text-3xl"
+            class="next bg-red-500/50 text-3xl"
             onclick="window.slider.plusSlides()">&#10095;</a
           >
         </section>
       </article>
 
-      <div class="flex justify-center w-full mb-5">
-        <div class="bouton">
+      <div class="flex justify-center w-full mb-10">
+        <div class="bouton w-fit">
           <a class="texte__btn" href=""> Voir + de photo </a>
         </div>
       </div>
 
-
-      <article class="bg-rouge py-10 px-10 flex flex-col gap-5">
-        <section class="flex flex-col gap-5">
+      <article class="bg-rouge py-10 px-10 flex flex-col gap-10 lg:gap-20">
+        <section class="flex flex-col gap-5 lg:gap-10 lg:w-4/5">
           <img
+            class="w-full lg:w-full"
             src="img-portfolio/bunbun_mockup.jpg"
             alt="Mockup projet de maquettte pour un café Kawaiis"
           />
-          <div class="flex flex-col gap-2">
-            <h2 class="font-titre text-3xl">
-              BunBun - Maquette
-            </h2>
-            <p class="font-corps">
-              Ce projet a été réalisé dans le cadre de mes études. L'objectif était de concevoir l'interface utilisateur (UI) d'un coffee shop fictif au thème Kawaii. Le propriétaire de BunBun souhaite que l'identité graphique existante soit bien visible sur le site, qui doit rester simple et efficace en permettant aux visiteurs de consulter facilement la carte et de comprendre le concept du coffee shop.
+          <div class="flex flex-col lg:flex-row gap-2 lg:gap-10">
+            <section class="flex flex-col gap-5">
+              <h2 class="font-titre text-3xl lg:w-[420px] lg:text-6xl">BunBun - Maquette</h2>
+              <p class="text-beige font-corps hidden lg:flex">Webdesign</p>
+            </section>
+            <p class="font-corps lg:text-md text-justify">
+              Ce projet a été réalisé dans le cadre de mes études. L'objectif
+              était de concevoir l'interface utilisateur (UI) d'un coffee shop
+              fictif au thème Kawaii. Le propriétaire de BunBun souhaite que
+              l'identité graphique existante soit bien visible sur le site, qui
+              doit rester simple et efficace en permettant aux visiteurs de
+              consulter facilement la carte et de comprendre le concept du
+              coffee shop.
             </p>
           </div>
         </section>
-        <section>
-          <img src="img-portfolio/bunbun_landing.jpg" alt="" />
-          <p class="text-black/70 text-sm italic">Maquette de BunBun</p>
+        <section class="flex gap-5 justify-center lg:gap-10">
+          <div class="lg:w-[700px] lg:h-[700px] flex flex-col gap-2.5">
+            <img class="w-full h-full" src="img-portfolio/bunbun_landing.jpg" alt="" />
+            <p class="text-black/70 italic lg:text-lg">Maquette de BunBun</p>
+          </div>
+          <div  class="lg:w-[700px] lg:h-[700px] flex flex-col gap-2.5">
+            <img class="w-full h-full" src="img-portfolio/design_system_bunbun.png" alt="" />
+            <p class="text-black/70 italic lg:text-lg">Design system</p>
+          </div>
         </section>
+        <a
+          class="bg-noir text-beige px-5 py-3 lg:w-fit lg:px-20 hover:bg-beige hover:text-noir transition duration-300 text-center mt-2.5 lg:mx-auto"
+          href={`/blog/bunbun/`}
+        >
+          En voir +
+        </a>
       </article>
 
-      <article class="bg-noir py-10 px-10 flex flex-col gap-5 text-beige">
-        <section class="flex flex-col gap-5">
+      <article class="bg-noir py-10 px-10 flex flex-col gap-10 text-beige lg:gap-20">
+        <section class="flex flex-col gap-5 lg:gap-10 lg:w-4/5">
           <img
+            class="w-full"
             src="img-portfolio/mockup-doom.jpg"
             alt="Mockup projet de maquettte pour un café Kawaiis"
           />
-          <div class="flex flex-col gap-2">
-            <h2 class="font-titre text-3xl">
-              Doom - landing page
-            </h2>
-            <p class="font-corps">
-              Une landing page est la page d'un site accessible via un lien, souvent pour promouvoir un produit, une personne ou un album. 
-              <br /> <br />
-              Ce projet, mon premier en UI design à été réalisé dans le cadre de mes études et utilise des images non créées par moi. J'ai choisi de faire mon site sur Doom, un jeu de tir à la première personne, dans un univers sombre et post-apocalyptique, où l'on lutte contre des créatures démoniaques pour sauver l'humanité.
+          <div class="flex flex-col lg:flex-row gap-2 lg:gap-10">
+            <section class="flex flex-col gap-5">
+              <h2 class="font-titre text-3xl lg:w-[420px] lg:text-6xl">Doom - landing page</h2>
+              <p class="text-rouge font-corps hidden lg:flex">Webdesign</p>
+            </section>
+            <p class="font-corps lg:text-md text-justify">
+              Une landing page est la page d'un site accessible via un lien,
+              souvent pour promouvoir un produit, une personne ou un album.
+              <br />
+              <br />
+              Ce projet, mon premier en UI design à été réalisé dans le cadre de
+              mes études et utilise des images non créées par moi. J'ai choisi de
+              faire mon site sur Doom, un jeu de tir à la première personne, dans
+              un univers sombre et post-apocalyptique, où l'on lutte contre des créatures
+              démoniaques pour sauver l'humanité.
+
             </p>
           </div>
         </section>
-        <section>
-          <img src="img-portfolio/site_doom.png" alt="" />
-          <p></p>
+        <section class="flex gap-5 lg:gap-10 justify-center">
+          <div class="lg:w-[700px] hidden lg:flex lg:flex-col lg:gap-2.5">
+            <img src="img-portfolio/accueildoom.jpg" alt="" />
+            <p class="text-beige italic">Landing page pour Doom eternal</p>
+          </div>
+          <div class="lg:w-[700px] flex flex-col gap-2.5">
+            <img class="object-cover" src="img-portfolio/newsletterdoom.jpg" alt="" />
+            <p class="text-beige italic">Newsletter du site</p>
+          </div>
         </section>
+        <a
+        class="bg-beige text-noir px-5 py-3 hover:bg-rouge hover:text-beige transition duration-300 text-center mt-2.5 lg:w-fit lg:px-20 lg:mx-auto"
+        href={`/blog/first-post/`}
+      >
+        En voir +
+      </a>
       </article>
 
-      <article class="flex flex-col justify-center gap-10 px-5 my-16">
+      <article class="flex flex-col justify-center gap-10 px-20 my-16">
         <h2 class="font-titre text-4xl">Autres projets</h2>
         <ul class="flex flex-wrap justify-center md:justify-start gap-10">
-          <li class="flex flex-col">
-            <a href="bunbun.html">
+          <li class="flex flex-col gap-2.5">
+            <a href={`/blog/markdown-style-guide/`}>
               <img
                 class="vignette_projet"
                 src="img-portfolio/bunbun_mockup.jpg"
                 alt="photo d'un mac où il y'a le site de Bunbun"
               />
             </a>
-            <h2 class="font-titre text-black text-2xl">Bunbun - Cofee shop</h2>
+            <h2 class="titre text-black">Bunbun - Coffee shop</h2>
           </li>
-          <li class="flex flex-col">
-            <a href="bunbun.html">
+          <li class="flex flex-col gap-2.5">
+            <a href={`/blog/using-mdx/`}>
               <img
                 class="vignette_projet"
                 src="img-portfolio/logo_mosbier.png"
                 alt="logo du bar Mos&Bier"
               />
             </a>
-            <h2 class="font-titre text-black text-2xl">Mos & Bier - bar</h2>
+            <h2 class="text-black titre">Mos & Bier - bar</h2>
           </li>
         </ul>
 
         <div class="flex justify-center w-full mb-5">
           <div class="bouton">
-            <a class="texte__btn" href=""> Voir + de projets </a>
+            <a class="texte__btn" href="/blog"> Voir + de projets </a>
           </div>
         </div>
       </article>
@@ -277,13 +386,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         color: ghostwhite;
       }
 
-      .bouton, .texte__btn {
+      .bouton,
+      .texte__btn {
         position: relative;
         z-index: 10;
         transition: color 0.4s;
       }
 
-      .bouton:hover, .texte__btn {
+      .bouton:hover,
+      .texte__btn {
         color: white;
       }
 

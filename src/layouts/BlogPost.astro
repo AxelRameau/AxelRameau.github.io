@@ -13,57 +13,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
-	<body>
+	<body class="bg-beige">
 		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+		<main class="w-full mt-36 lg:mt-60 mb-40 flex flex-col gap-10">
+			<article class="flex flex-col gap-5 w-full items-center">
+				<div class="hero-image px-10">
+					{heroImage && <img class="rounded-lg h-[400px] aspect-video object-cover" src={heroImage} alt="" />}
 				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
+				<div class="prose text-justify flex flex-col gap-5 px-10">
+					<div class="title text-center flex flex-col gap-2">
+						<div class="date ">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -73,13 +34,80 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h1 class="titre">{title}</h1>
 						<hr />
 					</div>
-					<slot />
+					<slot  />
 				</div>
 			</article>
+
+			
+			<div class="flex justify-center w-full mb-5">
+				<div class="bouton">
+				  <a class="texte__btn" href="/blog"> Voir + de projets </a>
+				</div>
+			  </div>
+
 		</main>
 		<Footer />
 	</body>
 </html>
+
+
+
+
+<style>
+	.bouton {
+	  outline: none;
+	  cursor: pointer;
+	  border: none;
+	  padding: 0.9rem 2rem;
+	  margin: 0;
+	  font-family: inherit;
+	  font-size: inherit;
+	  position: relative;
+	  display: inline-block;
+	  letter-spacing: 0.05rem;
+	  font-weight: 700;
+	  font-size: 17px;
+	  border-radius: 8px;
+	  overflow: hidden;
+	  background: var(--clr-rouge);
+	  color: ghostwhite;
+	}
+
+	.bouton,
+	.texte__btn {
+	  position: relative;
+	  z-index: 10;
+	  transition: color 0.4s;
+	}
+
+	.bouton:hover,
+	.texte__btn {
+	  color: white;
+	}
+
+	.bouton::before,
+	.bouton::after {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 0;
+	}
+
+	.bouton::before {
+	  content: "";
+	  background: #000;
+	  width: 120%;
+	  left: -10%;
+	  transform: skew(30deg);
+	  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	}
+
+	.bouton:hover::before {
+	  transform: translate3d(100%, 0, 0);
+	}
+  </style>
